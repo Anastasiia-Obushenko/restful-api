@@ -5,6 +5,11 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
+// Import routes
+const postsRoute = require('./routes/posts');
+
+app.use('/posts', postsRoute);
+
 // Routes
 app.get('/', (req, res) => {
     res.send("we are on home");
